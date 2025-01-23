@@ -1,15 +1,13 @@
-import 'cypress-xpath'
-describe("First Test on cypress", ()=>{
-  it('Test 1', ()=>{
-    cy.visit('https://www.saucedemo.com/v1/')
-    cy.get('#user-name').should('be.visible').click()
-    .type('standard_user')
-    cy.get('#password').should('be.visible').click()
-    .type('secret_sauce')
-    cy.xpath("//input[contains(@id, 'login-button')]").should('be.visible').click()
-    cy.get('.btn_inventory').click( {multiple: true})
-    cy.get("#shopping_cart_container").click()
-    cy.xpath('//a[normalize-space()="Continue Shopping"]').click()
-    cy.xpath('//button[normalize-space()="REMOVE"]').click({multiple: true})
+describe("End to end Check for Swag Labs", ()=>{
+  it("Verify that login and logout functionality is working fine", () =>{
+    cy.visit("https://sherlock.dmlabs.in/admin/authentication/")
+    cy.get('#email').click().type("cxo@yopmail.com")
+    cy.should("have.value", "cxo@yopmail.com")
+    cy.get('#password').click().type("Test@123")
+    cy.should("have.value", "Test@123")
+    cy.get(':nth-child(5) > .btn').click()
+    cy.get('.header-user-profile > .dropdown-toggle').click()
+    cy.get('.animated > .header-logout > a').click()
   })
+  
 })
