@@ -2,9 +2,12 @@ const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'https://parabank.parasoft.com/parabank/index.htm?ConnType=JDBC',
-    supportFile: 'cypress/support/e2e.js',
+    baseUrl: 'https://www.keka.com',
+    supportFile: 'cypress/support/index.js',
     fixturesFolder: 'cypress/fixtures',
-    retries: 1, // Optional: Enable test retries
+    experimentalModifyObstructiveThirdPartyCode: true,
+    env: {
+      aad_name: 'Test User', // Fallback environment variable
+    },
   },
 });
