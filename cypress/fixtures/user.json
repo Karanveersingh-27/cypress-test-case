@@ -1,0 +1,26 @@
+[
+    {
+      "firstname": "hello",
+      "lastname": "hello",
+      "address": "hello",
+      "city": "city",
+      "state": "state",
+      "zipcode": "123123",
+      "phone": "89898823423",
+      "ssn": "ssn",
+      "password": "Hello@123"
+    },
+    {
+        "firstname": "hello1",
+        "lastname": "hello1",
+        "address": "hello1",
+        "city": "city",
+        "state": "state",
+        "zipcode": "123123",
+        "phone": "89898823423",
+        "ssn": "ssn",
+        "password": "Hello@123"
+    }
+    
+  ]
+ 
